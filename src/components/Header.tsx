@@ -104,16 +104,7 @@ const Header = () => {
 
             {/* Action Buttons */}
             <div className="flex items-center gap-2">
-              {/* 360 View Button */}
-              <a
-                href="https://maps.app.goo.gl/mVMqLBzTfaxnVn4s5"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-all hover:scale-105"
-              >
-                <View size={18} />
-                <span className="hidden sm:inline">360° View</span>
-              </a>
+              {/* 360 View Button removed */}
 
               {/* Cart Button removed */}
             </div>
