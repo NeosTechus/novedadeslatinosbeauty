@@ -36,7 +36,7 @@ export const categories: Category[] = [
       { name: "Graphic Shirts" },
       { name: "Formal Button-Up Shirts" },
     ],
-    note: "Sizes 6–11, prices vary by style and size. Puffer Jackets, Leather Jackets, Blazers, Adult Shirts & Jackets, Kids Shirts & Jackets, and Vaquero Button-Ups (Women) are also available.",
+    note: "Sizes vary by age, prices vary by size ",
   },
   {
     id: "traditional-wear",
