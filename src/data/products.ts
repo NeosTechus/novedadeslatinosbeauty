@@ -194,9 +194,269 @@ export const products: Product[] = [
   ...Array.from({length: 44}, (_, i) => {
     const imgNum = 8390 + i;
     if (missing.includes(imgNum)) return null;
+    // Remove specific cowboy hat images from the product list
+    if ([8396, 8397, 8399, 8400, 8402, 8404, 8406, 8408, 8410, 8413, 8415, 8418, 8421, 8423, 8425, 8427].includes(imgNum)) return null;
+    if (imgNum === 8401) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8401.jpg`,
+          `/photos/IMG_8402.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8403) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8403.jpg`,
+          `/photos/IMG_8404.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8405) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8405.jpg`,
+          `/photos/IMG_8406.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8407) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8407.jpg`,
+          `/photos/IMG_8408.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8409) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8409.jpg`,
+          `/photos/IMG_8410.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8412) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8412.jpg`,
+          `/photos/IMG_8413.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8414) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8414.jpg`,
+          `/photos/IMG_8415.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8417) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8417.jpg`,
+          `/photos/IMG_8418.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8420) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8420.jpg`,
+          `/photos/IMG_8421.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8422) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8422.jpg`,
+          `/photos/IMG_8423.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8424) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8425.jpg`,
+          `/photos/IMG_8424.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8426) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8426.jpg`,
+          `/photos/IMG_8427.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (imgNum === 8403) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        name: `Cowboy Hat Photo #${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8403.jpg`,
+          `/photos/IMG_8404.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    if (i === 0) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        name: "",
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8390.jpg`,
+          `/photos/IMG_8391.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    } else if (i === 1 || i === 3) {
+      return null;
+    } else if (i === 2) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        name: "",
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8392.jpg`,
+          `/photos/IMG_8393.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    } else if (i === 4) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        name: "",
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8394.jpg`,
+          `/photos/IMG_8395.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    } else if (i === 5) {
+      return {
+        id: `accessories-cowboy-hat-${imgNum}`,
+        name: "",
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8396.jpg`,
+          `/photos/IMG_8397.jpg`
+        ],
+        category: "Accessories",
+        subCategory: "Cowboy Hats",
+        description: "Classic cowboy hat for all ages.",
+        isNew: false,
+        inStock: true,
+      };
+    }
     return {
       id: `accessories-cowboy-hat-${imgNum}`,
-      name: ((imgNum >= 8390 && imgNum <= 8396) || imgNum === 8397 || imgNum === 8399 || imgNum === 8400 || imgNum === 8401 || imgNum === 8402 || imgNum === 8403 || imgNum === 8404 || imgNum === 8405 || imgNum === 8406 || imgNum === 8407 || imgNum === 8408 || imgNum === 8409 || imgNum === 8410 || imgNum === 8412 || imgNum === 8413 || imgNum === 8414 || imgNum === 8415 || imgNum === 8417 || imgNum === 8418 || imgNum === 8420 || imgNum === 8421 || imgNum === 8422 || imgNum === 8423 || imgNum === 8424 || imgNum === 8425 || imgNum === 8426 || imgNum === 8427 || imgNum === 8428 || imgNum === 8429 || imgNum === 8430 || imgNum === 8432 || imgNum === 8433) ? '' : `Cowboy Hat Photo #${imgNum}`,
       image: `/photos/IMG_${imgNum}.jpg`,
       category: "Accessories",
       subCategory: "Cowboy Hats",
@@ -276,9 +536,26 @@ export const products: Product[] = [
     const imgNum = 8621 + i;
     if ([8660, 8663, 8666, 8671].includes(imgNum)) return null;
     if (missing.includes(imgNum)) return null;
+    // Add slideImages for Party Wear Photo #8621
+    if (imgNum === 8621) {
+      return {
+        id: `party-wear-${imgNum}`,
+        image: `/photos/IMG_${imgNum}.jpg`,
+        slideImages: [
+          `/photos/IMG_8621.jpg`,
+          `/photos/IMG_8624.jpg`
+        ],
+        category: "Traditional Wear",
+        subCategory: "Party Wear",
+        description: "Elegant party wear for special occasions.",
+        isNew: false,
+        inStock: true,
+      };
+    }
+    // Remove Party Wear Photo #8624
+    if (imgNum === 8624) return null;
     return {
       id: `party-wear-${imgNum}`,
-      name: (imgNum === 8621 || imgNum === 8624 || imgNum === 8627 || imgNum === 8632 || imgNum === 8637 || imgNum === 8641 || imgNum === 8648 || imgNum === 8653 || imgNum === 8672) ? '' : `Party Wear Photo #${imgNum}`,
       image: `/photos/IMG_${imgNum}.jpg`,
       category: "Traditional Wear",
       subCategory: "Party Wear",
@@ -306,7 +583,6 @@ export const products: Product[] = [
     if (missing.includes(imgNum)) return null;
     return {
       id: `made-in-mexico-women-${imgNum}`,
-      name: (imgNum === 8520 || imgNum === 8522 || imgNum === 8525 || imgNum === 8527 || imgNum === 8532 || imgNum === 8534 || imgNum === 8538 || imgNum === 8541 || imgNum === 8544) ? '' : `Made in Mexico (Women) Photo #${imgNum}`,
       image: `/photos/IMG_${imgNum}.jpg`,
       category: "Traditional Wear",
       subCategory: "Made in Mexico (Women)",
