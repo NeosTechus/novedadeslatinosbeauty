@@ -8,7 +8,6 @@ export const products: Product[] = [
   // Ensure these Party Wear products are at the top
   {
     id: 'party-wear-8660',
-    name: 'Pink Dress',
     image: '/photos/IMG_8660.jpg',
     category: 'Traditional Wear',
     subCategory: 'Party Wear',
@@ -18,7 +17,6 @@ export const products: Product[] = [
   },
   {
     id: 'party-wear-8663',
-    name: 'Blue Dress',
     image: '/photos/IMG_8663.jpg',
     category: 'Traditional Wear',
     subCategory: 'Party Wear',
@@ -28,7 +26,6 @@ export const products: Product[] = [
   },
   {
     id: 'party-wear-8666',
-    name: 'Orange Dress',
     image: '/photos/IMG_8666.jpg',
     category: 'Traditional Wear',
     subCategory: 'Party Wear',
@@ -38,7 +35,6 @@ export const products: Product[] = [
   },
   {
     id: 'party-wear-8671',
-    name: 'Silver Dress',
     image: '/photos/IMG_8671.jpg',
     category: 'Traditional Wear',
     subCategory: 'Party Wear',
@@ -54,7 +50,7 @@ export const products: Product[] = [
       return !missing.includes(num);
     }).map((img, i) => ({
       id: `accessories-casual-hat-${i+1}`,
-      name: i === 0 ? 'Black 50 Years Hat' : i === 1 ? 'Black LA Hat' : i === 2 ? 'Black Parrot Hat' : i === 3 ? 'Black LC 7 Hat' : i === 4 ? 'Black GDL Hat' : i === 5 ? '' : i === 6 ? '' : i === 7 ? '' : i === 8 ? '' : i === 9 ? 'Black YO SI PCSCO Hat' : i === 10 ? '' : i === 11 ? 'Black Ghost Racing Hat' : i === 12 ? 'Brown & Cement Hat' : i === 13 ? 'Yellow Blue Hat' : i === 14 ? 'Black USA Hat' : i === 15 ? 'Red RODEO Hat' : i === 16 ? 'Blue & Black Hat' : i === 17 ? 'Black Mexico Flag Hat' : i === 18 ? 'Red & Blue ST LOUIS Hat' : i === 19 ? 'Orange Hat' : i === 20 ? 'Dollar Hat' : i === 21 ? '' : i === 22 ? 'Green & Black Hat' : i === 23 ? 'Red & Blue CHICAGO Hat' : i === 25 ? '' : i === 26 ? '' : i === 27 ? '' : i === 28 ? '' : i === 29 ? 'Black ELVIEJON Hat' : i === 30 ? "Black I'm THE BOSS Hat " : i === 31 ? 'Black NEWYORK Hat' : i === 32 ? '' : i === 33 ? 'Black & Red  ST.Louis Hat' : i === 34 ? '' : i === 35 ? 'Green& White Mexico Hat' : i === 36 ? '' : i === 37 ? '' : i === 38 ? '' : i === 39 ? '' : `Casual Hat Photo #${i+1}`,
+      name: '',
       image: `/photos/${img}`,
       category: "Accessories",
       subCategory: "Casual Hats",
@@ -97,7 +93,7 @@ export const products: Product[] = [
     const animalSkinBootsIdx = [15,17,19,21,23,25,27,29,30,31,32,33,34,35,36,37,38,39,41];
     const product: any = {
       id: `all-footwear-${i+1}`,
-      name: i === 0 ? 'Black &Red Dotted Boots' : i === 1 ? 'Brown Boots' : i === 2 ? '' : i === 3 ? '' : i === 4 ? 'Pink &Redish Boots' : i === 5 ? 'Light Blue Boots' : i === 6 ? '' : i === 7 ? '' : i === 8 ? '' : i === 9 ? '' : i === 10 ? '' : i === 11 ? '' : i === 12 ? '' : i === 13 ? '' : i === 14 ? '' : i === 16 ? '' : i === 18 ? '' : i === 20 ? '' : i === 22 ? '' : i === 24 ? '' : i === 26 ? '' : i === 28 ? '' : i === 29 ? '' : i === 30 ? '' : i === 31 ? '' : i === 32 ? '' : i === 33 ? '' : i === 34 ? '' : i === 35 ? '' : i === 36 ? '' : i === 37 ? '' : i === 38 ? '' : i === 40 ? '' : `Footwear Photo #${i+1}`,
+      name: i === 0 ? '' : i === 1 ? '' : i === 2 ? '' : i === 3 ? '' : i === 4 ? '' : i === 5 ? '' : i === 6 ? '' : i === 7 ? '' : i === 8 ? '' : i === 9 ? '' : i === 10 ? '' : i === 11 ? '' : i === 12 ? '' : i === 13 ? '' : i === 14 ? '' : i === 16 ? '' : i === 18 ? '' : i === 20 ? '' : i === 22 ? '' : i === 24 ? '' : i === 26 ? '' : i === 28 ? '' : i === 29 ? '' : i === 30 ? '' : i === 31 ? '' : i === 32 ? '' : i === 33 ? '' : i === 34 ? '' : i === 35 ? '' : i === 36 ? '' : i === 37 ? '' : i === 38 ? '' : i === 40 ? '' : `Footwear Photo #${i+1}`,
       image: `/photos/${img}`,
       category: "Footwear",
       ...(i < 14 ? { subCategory: "Western Leather Boots" } : {}),
@@ -481,10 +477,10 @@ export const products: Product[] = [
   // Soccer (IMG_8435 to IMG_8475)
   ...Array.from({length: 41}, (_, i) => {
     const imgNum = 8435 + i;
-    if (missing.includes(imgNum) || imgNum === 8449) return null;
+    if (missing.includes(imgNum) || imgNum === 8449 || imgNum === 8472) return null; // Exclude 8472
     const product: any = {
       id: `soccer-photo-${imgNum}`,
-      name: imgNum === 8435 ? 'Emirates Red & Black Stripes Jersey' : imgNum === 8436 ? 'Emirates White Jersey' : imgNum === 8438 ? 'Emirates Blue & White Jersey' : imgNum === 8439 ? '' : imgNum === 8441 ? 'Emirates Blue & Black Jersey' : imgNum === 8442 ? '' : imgNum === 8443 ? '' : imgNum === 8444 ? '' : imgNum === 8445 ? 'QATAR AIRWAYS Blue & Red Jersey' : imgNum === 8446 ? '' : imgNum === 8447 ? '' : imgNum === 8448 ? 'Green MEXICO Jersey' : imgNum === 8450 ? '' : imgNum === 8452 ? '' : imgNum === 8453 ? '' : imgNum === 8455 ? '' : imgNum === 8456 ? '' : imgNum === 8459 ? '' : imgNum === 8461 ? '' : imgNum === 8462 ? '' : imgNum === 8463 ? '' : imgNum === 8464 ? '' : imgNum === 8465 ? 'Emirates Fly Better  Jersey ' : imgNum === 8466 ? '' : imgNum === 8467 ? '' : imgNum === 8468 ? '' : imgNum === 8469 ? '' : imgNum === 8472 ? '' : imgNum === 8473 ? '' : imgNum === 8474 ? '' : imgNum === 8475 ? '' : `Soccer Photo #${imgNum}`,
+      name: imgNum === 8435 ? 'AC Milan Jersey' : imgNum === 8436 ? 'Real Madrid Jersey' : imgNum === 8438 ? 'Argentina Jersey' : imgNum === 8439 ? 'Barcelona Jersey' : imgNum === 8441 ? 'Arsenal Jersey' : imgNum === 8442 ? 'FC Porto Jersey' : imgNum === 8443 ? 'Liverpool Jersey' : imgNum === 8444 ? 'Juventus Jersey' : imgNum === 8445 ? 'PSG Paris Saint - German Jersey' : imgNum === 8446 ? 'Leon Jersey' : imgNum === 8447 ? 'Venezuela Jersey' : imgNum === 8448 ? 'Mexico Jersey with the Virgin Mary & the Aztec Calendar' : imgNum === 8450 ? 'Honduras Olimpia Jersey' : imgNum === 8452 ? 'USA Jersey' : imgNum === 8453 ? 'Club America Jersey' : imgNum === 8455 ? 'Barcelona Jersey' : imgNum === 8456 ? 'Guatemala Jersey' : imgNum === 8459 ? 'Mexico Jersey' : imgNum === 8461 ? 'Toluca Jersey' : imgNum === 8462 ? 'EL Cruz Azul Jersey' : imgNum === 8463 ? 'Colombia Jersey' : imgNum === 8464 ? 'Croatia National Jersey' : imgNum === 8465 ? 'Real Madrid Jersey' : imgNum === 8466 ? 'Pumas Jersey' : imgNum === 8467 ? 'Guatemala Jersey' : imgNum === 8468 ? 'Barcelona Jersey' : imgNum === 8469 ? 'Brazil Jersey' : imgNum === 8473 ? 'Club America Jersey' : imgNum === 8474 ? 'Club Guadalajara Jersey' : imgNum === 8475 ? 'Honduras Jersey' : `Soccer Photo #${imgNum} Jersey`,
       image: `/photos/IMG_${imgNum}.jpg`,
       category: "Soccer",
       subCategory: "Soccer Photos",
@@ -492,12 +488,6 @@ export const products: Product[] = [
       isNew: false,
       inStock: true,
     };
-    if (imgNum === 8448) {
-      product.slideImages = [
-        "/photos/IMG_8448.jpg",
-        "/photos/IMG_8449.jpg"
-      ];
-    }
     return product;
   }).filter(Boolean),
 

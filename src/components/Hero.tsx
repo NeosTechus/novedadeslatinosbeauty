@@ -68,7 +68,7 @@ const Hero = () => {
           <div className="relative animate-fade-in">
             <div className="aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=800&h=1000&fit=crop"
+                src="/photos/landing.JPG"
                 alt="Premium western boots"
                 className="w-full h-full object-cover"
               />
