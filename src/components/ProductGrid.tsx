@@ -10,11 +10,20 @@ const ProductGrid = () => {
   const { filter, setCategory, setFilter } = useFilter();
   const { category: selectedCategory, subCategory: selectedSubCategory } = filter;
 
+  // Deduplicate products by image URL
+  const dedupeByImage = (arr) => {
+    const seen = new Set();
+    return arr.filter((item) => {
+      if (seen.has(item.image)) return false;
+      seen.add(item.image);
+      return true;
+    });
+  };
   const filteredProducts = selectedCategory === "All"
-    ? products
+    ? dedupeByImage(products)
     : selectedSubCategory
-      ? products.filter((p) => p.category === selectedCategory && p.subCategory === selectedSubCategory)
-      : products.filter((p) => p.category === selectedCategory);
+      ? dedupeByImage(products.filter((p) => p.category === selectedCategory && p.subCategory === selectedSubCategory))
+      : dedupeByImage(products.filter((p) => p.category === selectedCategory));
   const PRODUCTS_PER_ROW = 4;
   const ROWS_TO_SHOW = 2;
   const INITIAL_COUNT = PRODUCTS_PER_ROW * ROWS_TO_SHOW;

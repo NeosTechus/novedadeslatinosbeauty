@@ -76,9 +76,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             </p>
           )}
         </div>
-        <h3 className="font-display text-base md:text-lg font-semibold mb-2 leading-tight line-clamp-2">
-          {product.name}
-        </h3>
+        {/* Product name removed as requested */}
         <div className="flex items-center gap-2">
           {/* <span className="price-tag">{product.price}</span> */}
           {product.originalPrice && (

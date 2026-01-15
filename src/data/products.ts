@@ -4,10 +4,24 @@ import { Product } from "@/types/product";
 const missing = [8289,8291,8294,8296,8297,8299,8300,8302,8304,8306,8308,8310,8312,8314,8317,8320,8323,8326,8327,8328,8330,8333,8336,8337,8339,8341,8344,8349,8352,8356,8362,8371,8398,8411,8416,8419,8431,8437,8440,8451,8454,8457,8458,8460,8470,8471,8478,8479,8480,8481,8482,8484,8485,8486,8487,8488,8489,8492,8493,8496,8497,8498,8499,8500,8502,8503,8504,8505,8506,8507,8508,8509,8510,8511,8512,8513,8514,8515,8516,8518,8519,8521,8523,8524,8526,8528,8529,8530,8531,8533,8535,8536,8537,8539,8540,8542,8543,8546,8548,8550,8551,8552,8553,8554,8555,8556,8557,8558,8559,8560,8561,8563,8564,8565,8566,8568,8569,8570,8571,8572,8573,8574,8577,8579,8580,8582,8583,8584,8585,8588,8590,8591,8593,8594,8595,8597,8598,8600,8603,8604,8606,8608,8609,8610,8611,8613,8614,8615,8616,8617,8618,8619,8620,8622,8623,8625,8626,8628,8629,8630,8631,8633,8634,8635,8636,8638,8639,8640,8642,8643,8644,8645,8646,8647,8649,8650,8651,8652,8654,8655,8656,8657,8658,8659,8661,8662,8664,8665,8667,8668,8669,8670,8673,8674,8675,8676,8678,8679,8680,8681,8683,8685,8688,8689,8690,8691,8692];
 
 export const products: Product[] = [
+          {
+            id: 'party-wear-8672',
+            name: 'Traditional Wear',
+            image: '/photos/IMG_8672.jpg',
+            category: 'Traditional Wear',
+            subCategory: 'Traditional Dresses',
+            description: 'Beautiful traditional dress for cultural events and celebrations.',
+            isNew: false,
+            inStock: true,
+          },
+        // ...existing code...
+      // ...existing code...
+    // ...existing code...
   // ...existing product objects with images only...
   // Ensure these Party Wear products are at the top
   {
     id: 'party-wear-8660',
+    name: 'Traditional Wear #1',
     image: '/photos/IMG_8660.jpg',
     category: 'Traditional Wear',
     subCategory: 'Party Wear',
@@ -17,6 +31,7 @@ export const products: Product[] = [
   },
   {
     id: 'party-wear-8663',
+    name: 'Traditional Wear #2',
     image: '/photos/IMG_8663.jpg',
     category: 'Traditional Wear',
     subCategory: 'Party Wear',
@@ -26,6 +41,7 @@ export const products: Product[] = [
   },
   {
     id: 'party-wear-8666',
+    name: 'Traditional Wear #3',
     image: '/photos/IMG_8666.jpg',
     category: 'Traditional Wear',
     subCategory: 'Party Wear',
@@ -35,9 +51,10 @@ export const products: Product[] = [
   },
   {
     id: 'party-wear-8671',
+    name: 'Traditional Wear #4',
     image: '/photos/IMG_8671.jpg',
     category: 'Traditional Wear',
-    subCategory: 'Party Wear',
+    subCategory: 'Religious Wear',
     description: 'Elegant party wear for special occasions.',
     isNew: false,
     inStock: true,
@@ -518,42 +535,49 @@ export const products: Product[] = [
     };
   }).filter(Boolean),
 
-  // Traditional Wear > Made in Mexico (Women) (IMG_8520 to IMG_8544)
+  // Traditional Wear > Made in Mexico (IMG_8520 to IMG_8544)
   // Religious Items > Religious Figures (IMG_8545 to IMG_8592, IMG_8596 to IMG_8612)
   // Traditional Wear > Party Wear (IMG_8621 to IMG_8672)
   // Remove missing images from all dynamic arrays
-  ...Array.from({length: 52}, (_, i) => {
-    const imgNum = 8621 + i;
-    if ([8660, 8663, 8666, 8671].includes(imgNum)) return null;
-    if (missing.includes(imgNum)) return null;
-    // Add slideImages for Party Wear Photo #8621
-    if (imgNum === 8621) {
+  ...(() => {
+    let count = 5; // Start after the first 4 manually numbered above
+    return Array.from({length: 52}, (_, i) => {
+      const imgNum = 8621 + i;
+      if ([8660, 8663, 8666, 8671].includes(imgNum)) return null;
+      if (missing.includes(imgNum)) return null;
+          // Add slideImages for Religious Wear Photo #8621
+          if (imgNum === 8621) {
+            return {
+              id: `religious-wear-${imgNum}`,
+              name: `Traditional Wear #${count++}`,
+              image: `/photos/IMG_${imgNum}.jpg`,
+              slideImages: [
+                `/photos/IMG_8621.jpg`,
+                `/photos/IMG_8624.jpg`
+              ],
+              category: "Traditional Wear",
+              subCategory: "Religious Wear",
+              description: "Elegant religious wear for ceremonies and events.",
+              isNew: false,
+              inStock: true,
+            };
+          }
+      // Remove Party Wear Photo #8624
+      if (imgNum === 8624) return null;
+      if (count === 12) return null;
+      const productNumber = parseInt((`Traditional Wear #${count}`.match(/#(\d+)/) || [])[1], 10);
       return {
         id: `party-wear-${imgNum}`,
+        name: "Traditional Wear",
         image: `/photos/IMG_${imgNum}.jpg`,
-        slideImages: [
-          `/photos/IMG_8621.jpg`,
-          `/photos/IMG_8624.jpg`
-        ],
         category: "Traditional Wear",
-        subCategory: "Party Wear",
-        description: "Elegant party wear for special occasions.",
+        subCategory: ([6,7,8,9,10].includes(productNumber)) ? "Traditional Dresses" : "Party Wear",
+        description: ([6,7,8,9,10].includes(productNumber)) ? "Beautiful traditional dress for cultural events and celebrations." : "Elegant party wear for special occasions.",
         isNew: false,
         inStock: true,
       };
-    }
-    // Remove Party Wear Photo #8624
-    if (imgNum === 8624) return null;
-    return {
-      id: `party-wear-${imgNum}`,
-      image: `/photos/IMG_${imgNum}.jpg`,
-      category: "Traditional Wear",
-      subCategory: "Party Wear",
-      description: "Elegant party wear for special occasions.",
-      isNew: false,
-      inStock: true,
-    };
-  }).filter(Boolean),
+    }).filter(Boolean);
+  })(),
   ...Array.from({length: 48}, (_, i) => {
     const imgNum = 8545 + i;
     if (missing.includes(imgNum)) return null;
@@ -573,9 +597,10 @@ export const products: Product[] = [
     if (missing.includes(imgNum)) return null;
     return {
       id: `made-in-mexico-women-${imgNum}`,
+      name: `Traditional Wear #${i+1}`,
       image: `/photos/IMG_${imgNum}.jpg`,
       category: "Traditional Wear",
-      subCategory: "Made in Mexico (Women)",
+      subCategory: "Made in Mexico",
       description: "Authentic Mexican traditional wear.",
       isNew: false,
       inStock: true,

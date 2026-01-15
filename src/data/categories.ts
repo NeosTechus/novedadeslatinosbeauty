@@ -42,8 +42,10 @@ export const categories: Category[] = [
     id: "traditional-wear",
     name: "Traditional Wear",
     subItems: [
-      { name: "Made in Mexico (Women)" },
+      { name: "Made in Mexico" },
       { name: "Party Wear" },
+      { name: "Religious Wear" },
+      { name: "Traditional Dresses" },
     ],
     note: "Multiple sizes, prices vary by style and occasion. Baptism Attire and Communion Attire are also available.",
   },
